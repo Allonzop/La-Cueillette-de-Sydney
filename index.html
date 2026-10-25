@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Cueillette de Sydney — asperges, fraises et légumes de saison, en vente directe</title>
+<meta name="description" content="Producteur d'asperges, de fraises et de légumes de saison dans les Ardennes. Vente directe à Poilcourt-Sydney et à Sault-lès-Rethel, avec les produits de confrères locaux : viande, laitages et épicerie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Asap:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vert:#11613F; --vert-f:#0A4028; --vert-cl:#228D5C; --vert-vl:#E7F1EB; --vert-2:#1C7A4E;
+  --fraise:#D6342E; --fraise-f:#A8231E;
+  --creme:#FBF8F1; --creme-2:#F0E9DB; --creme-3:#DED3BE;
+  --encre:#1D211E; --encre-2:#56625C;
+  --r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Asap",system-ui,sans-serif;background:var(--creme);color:var(--encre);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3,.dsp{font-family:"Lora",Georgia,serif;font-weight:600;line-height:1.18;letter-spacing:-.004em}
+
+.topbar{background:var(--vert-f);color:#DCEAE2;font-size:14px}
+.topbar .wrap{display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:center;align-items:center;padding:9px 24px;text-align:center}
+.topbar b{color:#fff;font-weight:600}
+.topbar a{text-decoration:none}
+.topbar a:hover{color:#fff}
+
+header{background:var(--creme);position:sticky;top:0;z-index:40;border-bottom:1px solid var(--creme-3)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:106px;height:auto;border-radius:2px}
+.brand span{display:none}
+.nav nav{display:flex;gap:24px;font-size:14.5px;font-weight:500}
+.nav nav a{text-decoration:none;padding:4px 0;border-bottom:2px solid transparent;color:var(--encre-2)}
+.nav nav a:hover{border-color:var(--vert-cl);color:var(--vert)}
+.tel-btn{background:var(--vert);color:#fff;font-weight:700;font-size:15px;padding:10px 18px;border-radius:var(--r);text-decoration:none;white-space:nowrap}
+.tel-btn:hover{background:var(--vert-cl)}
+
+.hero{background:var(--vert);color:#EAF3EE;padding:54px 0 62px;position:relative}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:5px;background:linear-gradient(90deg,var(--fraise) 0 25%,#fff 25% 50%,var(--vert-cl) 50% 75%,#E8C84A 75% 100%)}
+.hero .wrap{display:grid;grid-template-columns:1fr minmax(250px,430px);gap:50px;align-items:center}
+.kicker{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.23em;text-transform:uppercase;color:#9ED6B8;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,4.6vw,52px);margin-bottom:18px;color:#fff}
+.hero h1 em{font-style:normal;color:#F2C94C}
+.hero p.lead{font-size:18.5px;color:#C9DED4;max-width:46ch}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15.5px;padding:13px 22px;border-radius:var(--r)}
+.btn-1{background:#F2C94C;color:#2A2206}
+.btn-1:hover{background:#fff}
+.btn-2{border:1px solid rgba(255,255,255,.4);color:#EAF3EE}
+.btn-2:hover{border-color:#F2C94C;color:#F2C94C}
+.hero-ph{max-width:430px;border:4px solid #fff;border-radius:var(--r);overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.hero-ph img{width:100%;height:auto}
+
+.strip{background:var(--creme-2);border-bottom:1px solid var(--creme-3)}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding:24px}
+.strip h3{font-family:"Asap",sans-serif;font-weight:700;font-size:15px;color:var(--vert);margin-bottom:3px}
+.strip p{font-size:14.5px;color:var(--encre-2);line-height:1.5}
+
+section{padding:72px 0}
+.sec-head{max-width:60ch;margin-bottom:38px}
+.sec-head h2{font-size:clamp(27px,3.4vw,38px);color:var(--vert);margin-bottom:12px}
+.sec-head p{color:var(--encre-2);font-size:17.5px}
+.rule{width:54px;height:3px;background:var(--fraise);margin-bottom:22px}
+
+.split{display:grid;grid-template-columns:1fr minmax(240px,460px);gap:50px;align-items:center}
+.split.rev{grid-template-columns:minmax(240px,460px) 1fr}
+.split .ph img{width:100%;height:auto;border-radius:var(--r)}
+.split .ph figcaption{font-size:13px;color:var(--encre-2);margin-top:9px;font-style:italic}
+.prose p{color:var(--encre-2)}
+.prose p+p{margin-top:14px}
+.prose strong{color:var(--encre);font-weight:600}
+blockquote{border-left:3px solid var(--vert-cl);padding-left:18px;margin:20px 0;font-family:"Lora",serif;font-size:19px;line-height:1.5;color:var(--encre)}
+
+.saison{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+.carte{border:1px solid var(--creme-3);border-radius:var(--r);background:#fff;overflow:hidden;display:flex;flex-direction:column}
+.carte img{width:100%;height:auto}
+.carte .bd{padding:18px 20px}
+.carte h3{font-size:20px;color:var(--vert);margin-bottom:6px}
+.carte p{font-size:15.5px;color:var(--encre-2);line-height:1.55}
+
+.photos3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.photos3 figure{margin:0}
+.photos3 img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--creme-3)}
+.photos3 figcaption{font-size:13px;color:var(--encre-2);margin-top:8px}
+
+.paniers{background:var(--vert);color:#EAF3EE}
+.paniers .sec-head h2{color:#fff}
+.paniers .sec-head p{color:#C9DED4}
+.paniers .rule{background:#F2C94C}
+.paniers .prose p{color:#C9DED4}
+.paniers .prose strong{color:#fff}
+.paniers .split .ph img{border:3px solid #fff}
+
+.magasins{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px}
+.magasin{border:2px solid var(--vert);border-radius:var(--r);overflow:hidden;background:#fff}
+.magasin .hd{background:var(--vert);color:#fff;padding:14px 20px;font-family:"Lora",serif;font-weight:600;font-size:20px}
+.magasin .bd{padding:18px 20px}
+.magasin .adr{font-size:16.5px;color:var(--encre);font-weight:600}
+.magasin .tel{display:inline-block;margin-top:8px;font-size:17px;font-weight:700;color:var(--vert);text-decoration:none;border-bottom:2px solid var(--vert-vl)}
+.magasin .tel:hover{border-color:var(--vert-cl)}
+.magasin ul{list-style:none;margin-top:16px;border-top:1px solid var(--creme-2);padding-top:10px}
+.magasin li{display:flex;justify-content:space-between;gap:14px;padding:7px 0;font-size:15.5px;border-bottom:1px solid var(--creme-2)}
+.magasin li:last-child{border-bottom:0}
+.magasin li.on{font-weight:600;color:var(--vert)}
+.magasin li span:last-child{color:var(--encre-2);text-align:right}
+.magasin li.on span:last-child{color:var(--vert)}
+
+.contact{background:var(--creme-2)}
+.contact-grid{display:grid;grid-template-columns:1fr minmax(240px,430px);gap:48px}
+.cinfo dt{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--vert-cl);font-weight:700;margin-top:22px}
+.cinfo dt:first-child{margin-top:0}
+.cinfo dd{font-size:17px;margin-top:4px}
+.cinfo dd a{text-decoration:none;border-bottom:1px solid var(--creme-3)}
+.cinfo dd a:hover{color:var(--vert)}
+.contact .ph img{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--creme-3)}
+
+footer{background:var(--vert-f);color:#9FBCAD;font-size:14px;padding:32px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 26px;justify-content:space-between;align-items:center}
+footer a{color:#D3E4DA}
+
+.aconf{display:inline-block;vertical-align:middle;margin-left:6px;font-family:"Asap",sans-serif;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--fraise);color:#fff;border-radius:2px;padding:2px 6px;line-height:1.5;white-space:nowrap}
+
+.demo{position:fixed;right:14px;bottom:14px;z-index:99;background:var(--encre);color:#fff;font-family:"Asap",sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;padding:9px 14px;border-radius:999px;text-decoration:none;box-shadow:0 6px 22px rgba(0,0,0,.3)}
+.demo b{color:#F2C94C}
+.demo:hover{background:var(--vert)}
+
+@media(max-width:980px){
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .strip .wrap{grid-template-columns:1fr;gap:18px}
+  .split,.split.rev{grid-template-columns:1fr;gap:28px}
+  .split .ph{max-width:460px}
+  .split.rev .ph{order:-1}
+  .saison{grid-template-columns:1fr}
+  .photos3{grid-template-columns:1fr 1fr}
+  .magasins{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:30px}
+  .contact .ph{max-width:430px}
+  .nav nav{display:none}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:50px 0}
+  .photos3{grid-template-columns:1fr;max-width:420px}
+  .brand img{width:88px}
+  .tel-btn{font-size:14px;padding:9px 13px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Poilcourt-Sydney <b>06 16 30 26 56</b></span>
+  <span>Sault-lès-Rethel <b>06 49 55 00 40</b></span>
+  <span>Ouvert <b>lundi, mardi, mercredi, vendredi et samedi</b></span>
+</div></div>
+
+<header><div class="wrap nav">
+  <a class="brand" href="#">
+    <img src="logo.jpg" alt="Logo La Cueillette de Sydney" width="400" height="298">
+    <span>La Cueillette de Sydney</span>
+  </a>
+  <nav>
+    <a href="#ferme">La ferme</a>
+    <a href="#saison">De saison</a>
+    <a href="#paniers">Les paniers</a>
+    <a href="#magasins">Nos 2 magasins</a>
+    <a href="#contact">Nous écrire</a>
+  </nav>
+  <a class="tel-btn" href="tel:+33616302656">06 16 30 26 56</a>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div>
+    <span class="kicker">Vente directe · Ardennes</span>
+    <h1>Asperges, fraises et <em>légumes de saison</em>, récoltés ici</h1>
+    <p class="lead">Producteurs à Poilcourt-Sydney. Nos légumes partent du champ au magasin, et on y ajoute ce que font nos confrères du coin : viande, laitages et épicerie.</p>
+    <div class="hero-actions">
+      <a class="btn btn-1" href="#magasins">Les deux magasins</a>
+      <a class="btn btn-2" href="#saison">Ce qu'il y a en ce moment</a>
+    </div>
+  </div>
+  <figure class="hero-ph">
+    <img src="etal-asperges.jpg" alt="Étal de bottes d'asperges blanches, de radis et de navets au magasin" width="780" height="780">
+  </figure>
+</div></div>
+
+<div class="strip"><div class="wrap">
+  <div><h3>Deux magasins</h3><p>Poilcourt-Sydney et Sault-lès-Rethel, à une demi-heure l'un de l'autre.</p></div>
+  <div><h3>Asperges et fraises</h3><p>Les deux productions de la maison, en saison.<span class="aconf">dates de saison</span></p></div>
+  <div><h3>Et les confrères du coin</h3><p>Viande, laitages et épicerie de producteurs locaux.</p></div>
+</div></div>
+
+<section id="ferme"><div class="wrap">
+  <div class="split">
+    <div class="prose">
+      <div class="rule"></div>
+      <h2 style="font-size:clamp(27px,3.4vw,38px);color:var(--vert);margin-bottom:16px">Du champ au magasin, sans intermédiaire</h2>
+      <blockquote>« Maraîchers depuis plusieurs années, nous vendons nos légumes frais et les produits de confrères locaux : viande, laitages et épicerie. »</blockquote>
+      <p>Les tunnels sont à quelques centaines de mètres du magasin. Les asperges, les fraises, les tomates, les salades : tout est planté, récolté et vendu sur place.</p>
+      <p>Ce qu'on ne produit pas, on va le chercher chez les voisins plutôt qu'en centrale. C'est ce qui remplit le reste des rayons.</p>
+    </div>
+    <figure class="ph">
+      <img src="equipe.jpg" alt="Deux personnes de la ferme, bottes d'asperges à la main, dans un tunnel" width="1040" height="780">
+      <figcaption>Les asperges, au sortir du tunnel.</figcaption>
+    </figure>
+  </div>
+
+  <div class="photos3">
+    <figure>
+      <img src="tunnels.jpg" alt="Les tunnels de la ferme au lever du jour" width="1040" height="780">
+      <figcaption>Les tunnels, au petit matin.</figcaption>
+    </figure>
+    <figure>
+      <img src="salades.jpg" alt="Rangées de salades sous voile dans le champ" width="585" height="780">
+      <figcaption>Les salades sous voile, au printemps.</figcaption>
+    </figure>
+    <figure>
+      <img src="magasin.jpg" alt="Le magasin de Poilcourt-Sydney, en bord de route" width="1200" height="675">
+      <figcaption>Le magasin de Poilcourt-Sydney.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<section id="saison" style="background:var(--vert-vl)"><div class="wrap">
+  <div class="sec-head">
+    <div class="rule"></div>
+    <h2>Ce qu'il y a, et quand</h2>
+    <p>La liste change toutes les trois semaines. Voici ce qui revient d'une saison à l'autre.</p>
+  </div>
+  <div class="saison">
+    <article class="carte">
+      <img src="fraises.jpg" alt="Barquettes de fraises dans des cagettes en bois" width="585" height="780">
+      <div class="bd">
+        <h3>Les fraises</h3>
+        <p>Barquettes remplies le jour même, posées en cagettes à l'entrée du magasin. Au printemps et au début de l'été.<span class="aconf">mois exacts</span></p>
+      </div>
+    </article>
+    <article class="carte">
+      <img src="tomates.jpg" alt="Cagettes de tomates rondes, cœur de bœuf et noires de Crimée" width="585" height="780">
+      <div class="bd">
+        <h3>L'été</h3>
+        <p>Tomates rondes, cœur de bœuf et noires, mâche, patates douces. Les poivrons, aubergines et courgettes suivent.</p>
+      </div>
+    </article>
+    <article class="carte">
+      <img src="courges.jpg" alt="Présentoir de courges, potimarrons et butternuts" width="585" height="780">
+      <div class="bd">
+        <h3>L'automne</h3>
+        <p>Potimarrons, butternuts, courges décoratives et potirons, sur les présentoirs en bois du magasin.</p>
+      </div>
+    </article>
+    <article class="carte">
+      <img src="legumes-hiver.jpg" alt="Cagette de légumes d'hiver : céleri, carottes, chou-fleur, panais, poireaux" width="1040" height="780">
+      <div class="bd">
+        <h3>L'hiver</h3>
+        <p>Céleri-rave, carottes, chou-fleur, panais, poireaux, navets, oignons, pommes et poires.</p>
+      </div>
+    </article>
+  </div>
+  <p style="margin-top:24px;color:var(--encre-2);font-size:16px">Et au fil de l'année : radis, navets boule d'or, blettes, rhubarbe, romanesco, radis noir, salades.<span class="aconf">liste à compléter avec vous</span></p>
+</div></section>
+
+<section class="paniers" id="paniers"><div class="wrap">
+  <div class="split rev">
+    <figure class="ph">
+      <img src="paniers.jpg" alt="Deux paniers garnis de légumes et de fruits, à 30 € et à 15 €" width="780" height="780">
+    </figure>
+    <div class="prose">
+      <div class="rule"></div>
+      <h2 style="font-size:clamp(27px,3.4vw,38px);color:#fff;margin-bottom:16px">Les paniers</h2>
+      <p>Deux formats préparés avec ce qu'il y a de meilleur ce jour-là : un petit et un grand.<span class="aconf">prix à confirmer</span></p>
+      <p><strong>Le petit</strong> : mâche, carottes, pommes de terre, chou, clémentines.<br><strong>Le grand</strong> : la même chose en plus large, avec des pommes, des poires, un chou vert et une terrine de la maison voisine.</p>
+      <p>On peut aussi venir avec sa liste et composer soi-même. Pour une commande, un coup de fil la veille suffit.<span class="aconf">commande possible ?</span></p>
+    </div>
+  </div>
+</div></section>
+
+<section id="magasins"><div class="wrap">
+  <div class="sec-head">
+    <div class="rule"></div>
+    <h2>Nos deux magasins</h2>
+    <p>Un à la ferme, à Poilcourt-Sydney. Un second à Sault-lès-Rethel.</p>
+  </div>
+  <div class="magasins">
+    <div class="magasin">
+      <div class="hd">Poilcourt-Sydney</div>
+      <div class="bd">
+        <div class="adr">Route de Vouziers<br>08190 Poilcourt-Sydney</div>
+        <a class="tel" href="tel:+33616302656">06 16 30 26 56</a>
+        <ul>
+          <li class="on"><span>Lundi, mardi, mercredi</span><span>10h–12h · 14h–19h</span></li>
+          <li><span>Jeudi</span><span>Fermé</span></li>
+          <li class="on"><span>Vendredi</span><span>10h–12h · 14h–19h</span></li>
+          <li class="on"><span>Samedi</span><span>10h–12h · 14h–18h</span></li>
+          <li><span>Dimanche</span><span>Fermé</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="magasin">
+      <div class="hd">Sault-lès-Rethel</div>
+      <div class="bd">
+        <div class="adr">1 avenue de Bourgoin<br>08300 Sault-lès-Rethel</div>
+        <a class="tel" href="tel:+33649550040">06 49 55 00 40</a>
+        <ul>
+          <li><span>Horaires du magasin</span><span>à préciser<span class="aconf">à compléter</span></span></li>
+        </ul>
+        <p style="font-size:15px;color:var(--encre-2);margin-top:14px">Le second magasin a sa propre page Facebook, « La Cueillette de Sydney - Rethel ».</p>
+      </div>
+    </div>
+  </div>
+  <figure style="margin-top:34px;max-width:520px">
+    <img src="flyer.jpg" alt="Le dépliant de la Cueillette de Sydney, avec les deux adresses" width="809" height="780" style="width:100%;height:auto;border-radius:4px;border:1px solid var(--creme-3)">
+    <figcaption style="font-size:13px;color:var(--encre-2);margin-top:8px;font-style:italic">Le dépliant de la ferme.</figcaption>
+  </figure>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <div class="sec-head">
+    <div class="rule"></div>
+    <h2>Nous écrire</h2>
+    <p>Pour une commande, une question sur ce qu'il y a en ce moment, ou un panier à préparer.</p>
+  </div>
+  <div class="contact-grid">
+    <dl class="cinfo">
+      <dt>Magasin de la ferme</dt>
+      <dd>Route de Vouziers, 08190 Poilcourt-Sydney<br><a href="tel:+33616302656">06 16 30 26 56</a></dd>
+      <dt>Magasin de Sault-lès-Rethel</dt>
+      <dd>1 avenue de Bourgoin, 08300 Sault-lès-Rethel<br><a href="tel:+33649550040">06 49 55 00 40</a></dd>
+      <dt>E-mail</dt>
+      <dd><a href="mailto:edouard888@hotmail.fr">edouard888@hotmail.fr</a></dd>
+      <dt>Suivre la ferme</dt>
+      <dd><a href="https://www.facebook.com/La-Cueillette-de-Sydney-575832695930845/">Facebook — La Cueillette de Sydney</a></dd>
+    </dl>
+    <figure class="ph">
+      <img src="legumes-hiver.jpg" alt="Cagette de légumes et de fruits de saison" width="1040" height="780">
+    </figure>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>La Cueillette de Sydney — Route de Vouziers, 08190 Poilcourt-Sydney — 06 16 30 26 56</div>
+  <div><a href="mentions-legales.html">Mentions légales</a></div>
+</div></footer>
+
+<a class="demo" href="https://kraon.netlify.app/offre" target="_blank" rel="noopener">DÉMO <b>KRAON</b></a>
+
+</body>
+</html>
